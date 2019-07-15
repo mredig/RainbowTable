@@ -18,8 +18,8 @@ class ColorTableViewController: UITableViewController {
 						 MyColor(color: .yellow, name: "Yellow"),
 						 MyColor(color: .green, name: "Green"),
 						 MyColor(color: .blue, name: "Blue"),
-//						 MyColor(color: ., name: "Indigo"),
-//						 MyColor(color: .vio, name: <#T##String#>)
+						 MyColor(color: UIColor(red: 0.294, green: 0, blue: 0.51, alpha: 1), name: "Indigo"),
+						 MyColor(color: UIColor(red: 0.933, green: 0.51, blue: 0.933, alpha: 1.0), name: "Violet")
 						 ]
 
 	var rainbowColors: [MyColor] = []

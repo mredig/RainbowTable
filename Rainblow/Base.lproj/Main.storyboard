@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Rainbow TableVC-->
+        <!--Color Table View Controller-->
         <scene sceneID="E6X-6U-K7z">
             <objects>
-                <tableViewController id="Ia6-aW-32M" customClass="RainbowTableVC" customModule="Rainblow" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Ia6-aW-32M" customClass="ColorTableViewController" customModule="Rainblow" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fo5-TT-Gap">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +36,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ahB-GR-N6Z" kind="show" id="yYK-im-beF"/>
+                                    <segue destination="ahB-GR-N6Z" kind="show" identifier="ShowColorDetail" id="yYK-im-beF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -71,8 +71,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bd4-xF-wsN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1pp-93-1Lo">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="1pp-93-1Lo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

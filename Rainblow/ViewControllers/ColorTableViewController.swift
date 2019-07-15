@@ -1,5 +1,5 @@
 //
-//  RainbowTableVC.swift
+//  ColorTableViewController.swift
 //  Rainblow
 //
 //  Created by Michael Redig on 7/15/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RainbowTableVC: UITableViewController {
+class ColorTableViewController: UITableViewController {
 	let rainbowColors = [MyColor(color: .red, name: "Red"),
 						 MyColor(color: .orange, name: "Orange"),
 						 MyColor(color: .yellow, name: "Yellow"),
@@ -17,10 +17,21 @@ class RainbowTableVC: UITableViewController {
 //						 MyColor(color: ., name: "Indigo"),
 //						 MyColor(color: .vio, name: <#T##String#>)
 						 ]
+
+
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "ShowColorDetail" {
+			if let colorDetailVC = segue.destination as? ColorDetailViewController {
+				guard let colorIndex = tableView.indexPathForSelectedRow else { return }
+				let selectedColor = rainbowColors[colorIndex.row]
+				colorDetailVC.color = selectedColor
+			}
+		}
+	}
 }
 
 // MARK: - table view stuff
-extension RainbowTableVC {
+extension ColorTableViewController {
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return rainbowColors.count
 	}

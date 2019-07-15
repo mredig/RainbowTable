@@ -9,7 +9,11 @@
 import UIKit
 
 class ColorTableViewController: UITableViewController {
-	let rainbowColors = [MyColor(color: .red, name: "Red"),
+
+	// extra!
+	@IBOutlet var doubleRainbowButton: UIBarButtonItem!
+
+	let basicRainbowColors = [MyColor(color: .red, name: "Red"),
 						 MyColor(color: .orange, name: "Orange"),
 						 MyColor(color: .yellow, name: "Yellow"),
 						 MyColor(color: .green, name: "Green"),
@@ -18,6 +22,7 @@ class ColorTableViewController: UITableViewController {
 //						 MyColor(color: .vio, name: <#T##String#>)
 						 ]
 
+	var rainbowColors: [MyColor] = []
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "ShowColorDetail" {
@@ -27,6 +32,22 @@ class ColorTableViewController: UITableViewController {
 				colorDetailVC.color = selectedColor
 			}
 		}
+	}
+
+	// extra!
+	@IBAction func doubleRainbowPressed(_ sender: UIBarButtonItem) {
+		if rainbowColors.count > basicRainbowColors.count {
+			rainbowColors = basicRainbowColors
+		} else {
+			rainbowColors += basicRainbowColors
+		}
+		tableView.reloadData()
+	}
+
+	//extra!
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		rainbowColors = basicRainbowColors
 	}
 }
 
@@ -40,6 +61,7 @@ extension ColorTableViewController {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "RainbowCell", for: indexPath)
 		let colorAtIndex = rainbowColors[indexPath.row]
 		cell.textLabel?.text = colorAtIndex.name
+		cell.backgroundColor = colorAtIndex.color
 		return cell
 	}
 }

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Color Table View Controller-->
+        <!--Rainbow-->
         <scene sceneID="E6X-6U-K7z">
             <objects>
                 <tableViewController id="Ia6-aW-32M" customClass="ColorTableViewController" customModule="Rainblow" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,7 +45,16 @@
                             <outlet property="delegate" destination="Ia6-aW-32M" id="WT7-b6-Jhp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gPG-vw-uDc"/>
+                    <navigationItem key="navigationItem" title="Rainbow" id="gPG-vw-uDc">
+                        <barButtonItem key="rightBarButtonItem" title="Double Rainbow" id="KMh-VQ-RWF">
+                            <connections>
+                                <action selector="doubleRainbowPressed:" destination="Ia6-aW-32M" id="B7T-gF-Dee"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doubleRainbowButton" destination="KMh-VQ-RWF" id="A9c-Yw-PQC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ctu-li-f7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		33F7172722DCDB420085238C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7172622DCDB420085238C /* AppDelegate.swift */; };
-		33F7172922DCDB420085238C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7172822DCDB420085238C /* ViewController.swift */; };
+		33F7172922DCDB420085238C /* RainbowTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7172822DCDB420085238C /* RainbowTableVC.swift */; };
 		33F7172C22DCDB420085238C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F7172A22DCDB420085238C /* Main.storyboard */; };
 		33F7172E22DCDB440085238C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F7172D22DCDB440085238C /* Assets.xcassets */; };
 		33F7173122DCDB440085238C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F7172F22DCDB440085238C /* LaunchScreen.storyboard */; };
+		33F7173C22DCDBA50085238C /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7173B22DCDBA50085238C /* MyColor.swift */; };
+		33F7173E22DCDC0C0085238C /* ColorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7173D22DCDC0C0085238C /* ColorDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		33F7172322DCDB420085238C /* Rainblow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rainblow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F7172622DCDB420085238C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		33F7172822DCDB420085238C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		33F7172822DCDB420085238C /* RainbowTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainbowTableVC.swift; sourceTree = "<group>"; };
 		33F7172B22DCDB420085238C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33F7172D22DCDB440085238C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33F7173022DCDB440085238C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33F7173222DCDB440085238C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33F7173B22DCDBA50085238C /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
+		33F7173D22DCDC0C0085238C /* ColorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		33F7172522DCDB420085238C /* Rainblow */ = {
 			isa = PBXGroup;
 			children = (
+				33F7173A22DCDB950085238C /* Models */,
+				33F7173822DCDB890085238C /* ViewControllers */,
 				33F7172622DCDB420085238C /* AppDelegate.swift */,
-				33F7172822DCDB420085238C /* ViewController.swift */,
 				33F7172A22DCDB420085238C /* Main.storyboard */,
 				33F7172D22DCDB440085238C /* Assets.xcassets */,
 				33F7172F22DCDB440085238C /* LaunchScreen.storyboard */,
 				33F7173222DCDB440085238C /* Info.plist */,
 			);
 			path = Rainblow;
+			sourceTree = "<group>";
+		};
+		33F7173822DCDB890085238C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				33F7172822DCDB420085238C /* RainbowTableVC.swift */,
+				33F7173D22DCDC0C0085238C /* ColorDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		33F7173A22DCDB950085238C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				33F7173B22DCDBA50085238C /* MyColor.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33F7172922DCDB420085238C /* ViewController.swift in Sources */,
+				33F7172922DCDB420085238C /* RainbowTableVC.swift in Sources */,
 				33F7172722DCDB420085238C /* AppDelegate.swift in Sources */,
+				33F7173C22DCDBA50085238C /* MyColor.swift in Sources */,
+				33F7173E22DCDC0C0085238C /* ColorDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

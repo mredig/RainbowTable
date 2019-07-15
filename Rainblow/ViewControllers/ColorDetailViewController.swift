@@ -9,10 +9,11 @@
 import UIKit
 
 class ColorDetailViewController: UIViewController {
-	var color: MyColor? {
-		didSet {
-			updateViews()
-		}
+	var color: MyColor?
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		updateViews()
 	}
 
 	func updateViews() {
